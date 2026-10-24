@@ -1,3 +1,5 @@
+import { porcentajeDe } from './dinero';
+
 // Ordenados de mayor a menor subtotal: se aplica el primer tramo que se alcance.
 const TRAMOS_DESCUENTO = [
   { subtotalDesde: 500000, porcentaje: 10 },
@@ -10,5 +12,5 @@ export function porcentajeDescuentoPorVolumen(subtotal: number): number {
 }
 
 export function calcularDescuentoPorVolumen(subtotal: number): number {
-  return Math.round((subtotal * porcentajeDescuentoPorVolumen(subtotal)) / 100);
+  return porcentajeDe(subtotal, porcentajeDescuentoPorVolumen(subtotal));
 }
