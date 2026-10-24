@@ -43,16 +43,16 @@
 
 | ID | Historia | Descripción | Datos de entrada | Resultado esperado | Estado |
 |---|---|---|---|---|---|
-| CP-22 | HU-04 CA1 | SABANERO10 en el subtotal mínimo | SABANERO10, subtotal $50.000, fecha vigente | 10 % de descuento; envío no gratis | Pendiente |
-| CP-23 | HU-04 CA1 (S4) | SABANERO10 por debajo del mínimo | SABANERO10, subtotal $49.999 | Error de cupón no aplicable | Pendiente |
-| CP-24 | HU-04 CA2 | ENVIOGRATIS deja el envío en $0 | ENVIOGRATIS, subtotal $30.000 | 0 % de descuento; envío gratis | Pendiente |
-| CP-25 | HU-04 CA3 | Cupón inexistente | NOEXISTE, subtotal $100.000 | Error de cupón inválido | Pendiente |
-| CP-26 | HU-04 CA3 | Cupón vencido | Cupón con vencimiento 2026-01-31; fecha de hoy 2026-02-01 | Error de cupón inválido | Pendiente |
-| CP-27 | HU-04 CA4 | Solo se aplica el mayor: cupón 10 % contra volumen 5 % | Subtotal $300.000 + SABANERO10 | 10 % ($30.000), no 15 % | Pendiente |
-| CP-28 | HU-04 CA4 | Empate de descuentos: no se suman | Subtotal $600.000 + SABANERO10 | 10 % ($60.000), no 20 % | Pendiente |
-| CP-29 | HU-04 CA4 (S6) | ENVIOGRATIS no anula el descuento por volumen | Subtotal $300.000 + ENVIOGRATIS | 5 % ($15.000) y envío gratis | Pendiente |
-| CP-43 | HU-04 CA3 | El cupón sigue vigente el día de su vencimiento | Cupón con vencimiento 2026-01-31; fecha de hoy 2026-01-31 | 10 % de descuento; envío no gratis | Pendiente |
-| CP-44 | HU-04 CA4 | Sin cupón se aplica solo el descuento por volumen | Subtotal $228.000, sin cupón | 5 % ($11.400); envío no gratis | Pendiente |
+| CP-22 | HU-04 CA1 | SABANERO10 en el subtotal mínimo | SABANERO10, subtotal $50.000, fecha vigente | 10 % de descuento; envío no gratis | Pasa |
+| CP-23 | HU-04 CA1 (S4) | SABANERO10 por debajo del mínimo | SABANERO10, subtotal $49.999 | Error de cupón no aplicable | Pasa |
+| CP-24 | HU-04 CA2 | ENVIOGRATIS deja el envío en $0 | ENVIOGRATIS, subtotal $30.000 | 0 % de descuento; envío gratis | Pasa |
+| CP-25 | HU-04 CA3 | Cupón inexistente | NOEXISTE, subtotal $100.000 | Error de cupón inválido | Pasa |
+| CP-26 | HU-04 CA3 | Cupón vencido | Cupón con vencimiento 2026-01-31; fecha de hoy 2026-02-01 | Error de cupón inválido | Pasa |
+| CP-27 | HU-04 CA4 | Solo se aplica el mayor: cupón 10 % contra volumen 5 % | Subtotal $300.000 + SABANERO10 | 10 % ($30.000), no 15 % | Pasa |
+| CP-28 | HU-04 CA4 | Empate de descuentos: no se suman | Subtotal $600.000 + SABANERO10 | 10 % ($60.000), no 20 % | Pasa |
+| CP-29 | HU-04 CA4 (S6) | ENVIOGRATIS no anula el descuento por volumen | Subtotal $300.000 + ENVIOGRATIS | 5 % ($15.000) y envío gratis | Pasa |
+| CP-43 | HU-04 CA3 | El cupón sigue vigente el día de su vencimiento | Cupón con vencimiento 2026-01-31; fecha de hoy 2026-01-31 | 10 % de descuento; envío no gratis | Pasa |
+| CP-44 | HU-04 CA4 | Sin cupón se aplica solo el descuento por volumen | Subtotal $228.000, sin cupón | 5 % ($11.400); envío no gratis | Pasa |
 
 ## HU-05. Calcular el envío (Integrante B)
 

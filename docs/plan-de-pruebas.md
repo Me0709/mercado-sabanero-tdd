@@ -89,7 +89,7 @@ El enunciado deja algunos puntos abiertos. Se decidió lo siguiente y debe confi
 4. **Cupón bajo el mínimo (HU-04 CA1):** SABANERO10 con subtotal menor a $50.000 se rechaza con un error de cupón no aplicable. El enunciado no define este caso.
 5. **Descuento mayor (HU-04 CA4):** se compara el porcentaje por volumen con el del cupón y se aplica solo el mayor. En un empate se aplica uno solo.
 6. **ENVIOGRATIS (HU-04 CA2):** no es un descuento porcentual. Solo deja el envío en $0 y no anula el descuento por volumen.
-7. **Cupones vencidos (HU-04 CA3):** cada cupón tiene fecha de vencimiento en formato `AAAA-MM-DD`; está vigente si la fecha de hoy es menor o igual a la de vencimiento. Los códigos se comparan exactamente, sin normalizar.
+7. **Cupones vencidos (HU-04 CA3):** cada cupón tiene fecha de vencimiento en formato `AAAA-MM-DD`; está vigente si la fecha de hoy es menor o igual a la de vencimiento. Los códigos se comparan exactamente, sin normalizar. El catálogo por defecto trae SABANERO10 y ENVIOGRATIS con vencimiento 2026-12-31, fecha elegida por el equipo.
 8. **Envío gratis (HU-05 CA2):** "productos con IVA suman $150.000 o más" es la suma de precio × cantidad, a valor de lista y antes del descuento, de los productos con tarifa de IVA mayor a 0 %. El límite es inclusivo.
 9. **Carrito (HU-01):** el máximo de 50 unidades y la verificación de stock se aplican a la cantidad acumulada en el carrito.
 10. **Puntos (HU-06):** "el doble de puntos" es 2 × (total pagado sin envío ÷ 1.000, parte entera).
