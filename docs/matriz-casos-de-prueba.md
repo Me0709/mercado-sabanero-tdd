@@ -1,6 +1,6 @@
 # Matriz de casos de prueba
 
-41 casos. Todos en estado **Pendiente** hasta que se escriba su prueba. Los supuestos citados (S4, S6, S9) son los de la sección 9 del plan de pruebas.
+42 casos. Todos en estado **Pendiente** hasta que se escriba su prueba. Los supuestos citados (S4, S6, S9) son los de la sección 9 del plan de pruebas.
 
 ## HU-01. Agregar productos al carrito (Integrante B)
 
@@ -37,6 +37,7 @@
 | CP-19 | HU-03 CA3 | Límite inferior del 10 % | Subtotal $500.000 | 10 % | Pendiente |
 | CP-20 | HU-03 CA3 | Subtotal alto | Subtotal $1.000.000 | 10 % | Pendiente |
 | CP-21 | HU-03 CA2 | Monto del descuento del ejemplo | Subtotal $228.000 | Descuento $11.400 | Pendiente |
+| CP-42 | HU-03 CA2 | Redondea el monto del descuento al peso más cercano (el .5 sube) | Subtotal $200.010 | Descuento $10.001 (10.000,5 → 10.001) | Pendiente |
 
 ## HU-04. Usar cupones (Integrante A)
 
@@ -91,5 +92,5 @@ Los 18 criterios quedan cubiertos.
 | HU-02 CA1 | CP-09, 10, 11, 12 | HU-05 CA1 | CP-30, 31 |
 | HU-02 CA2 | CP-13, 14 | HU-05 CA2 | CP-32, 33 |
 | HU-03 CA1 | CP-15, 16 | HU-05 CA3 | CP-34 |
-| HU-03 CA2 | CP-17, 18, 21 | HU-06 CA1 | CP-36, 37, 38, 40 |
+| HU-03 CA2 | CP-17, 18, 21, 42 | HU-06 CA1 | CP-36, 37, 38, 40 |
 | HU-03 CA3 | CP-19, 20 | HU-06 CA2 | CP-39 |
