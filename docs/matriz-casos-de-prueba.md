@@ -1,6 +1,6 @@
 # Matriz de casos de prueba
 
-42 casos. Todos en estado **Pendiente** hasta que se escriba su prueba. Los supuestos citados (S4, S6, S9) son los de la sección 9 del plan de pruebas.
+42 casos. Cada caso pasa de **Pendiente** a **Pasa** cuando su prueba se ejecuta en verde. Los supuestos citados (S4, S6, S9) son los de la sección 9 del plan de pruebas.
 
 ## HU-01. Agregar productos al carrito (Integrante B)
 
@@ -30,14 +30,14 @@
 
 | ID | Historia | Descripción | Datos de entrada | Resultado esperado | Estado |
 |---|---|---|---|---|---|
-| CP-15 | HU-03 CA1 | Sin descuento bajo el umbral | Subtotal $50.000 | 0 % | Pendiente |
-| CP-16 | HU-03 CA1 | Sin descuento en el límite superior del tramo | Subtotal $199.999 | 0 % | Pendiente |
-| CP-17 | HU-03 CA2 | Límite inferior del 5 % | Subtotal $200.000 | 5 % | Pendiente |
-| CP-18 | HU-03 CA2 | Límite superior del 5 % | Subtotal $499.999 | 5 % | Pendiente |
-| CP-19 | HU-03 CA3 | Límite inferior del 10 % | Subtotal $500.000 | 10 % | Pendiente |
-| CP-20 | HU-03 CA3 | Subtotal alto | Subtotal $1.000.000 | 10 % | Pendiente |
-| CP-21 | HU-03 CA2 | Monto del descuento del ejemplo | Subtotal $228.000 | Descuento $11.400 | Pendiente |
-| CP-42 | HU-03 CA2 | Redondea el monto del descuento al peso más cercano (el .5 sube) | Subtotal $200.010 | Descuento $10.001 (10.000,5 → 10.001) | Pendiente |
+| CP-15 | HU-03 CA1 | Sin descuento bajo el umbral | Subtotal $50.000 | 0 % | Pasa |
+| CP-16 | HU-03 CA1 | Sin descuento en el límite superior del tramo | Subtotal $199.999 | 0 % | Pasa |
+| CP-17 | HU-03 CA2 | Límite inferior del 5 % | Subtotal $200.000 | 5 % | Pasa |
+| CP-18 | HU-03 CA2 | Límite superior del 5 % | Subtotal $499.999 | 5 % | Pasa |
+| CP-19 | HU-03 CA3 | Límite inferior del 10 % | Subtotal $500.000 | 10 % | Pasa |
+| CP-20 | HU-03 CA3 | Subtotal alto | Subtotal $1.000.000 | 10 % | Pasa |
+| CP-21 | HU-03 CA2 | Monto del descuento del ejemplo | Subtotal $228.000 | Descuento $11.400 | Pasa |
+| CP-42 | HU-03 CA2 | Redondea el monto del descuento al peso más cercano (el .5 sube) | Subtotal $200.010 | Descuento $10.001 (10.000,5 → 10.001) | Pasa |
 
 ## HU-04. Usar cupones (Integrante A)
 
