@@ -19,12 +19,12 @@
 
 | ID | Historia | Descripción | Datos de entrada | Resultado esperado | Estado |
 |---|---|---|---|---|---|
-| CP-09 | HU-02 CA1 | IVA de tarifa 0 % | $4.500 × 1, tarifa 0 %, sin descuento | IVA $0 | Pendiente |
-| CP-10 | HU-02 CA1 | IVA de tarifa 5 % | $15.000 × 1, tarifa 5 %, sin descuento | IVA $750 | Pendiente |
-| CP-11 | HU-02 CA1 | IVA de tarifa 19 % | $180.000 × 1, tarifa 19 %, sin descuento | IVA $34.200 | Pendiente |
-| CP-12 | HU-02 CA1 | Redondea al peso más cercano (el .5 sube) | $4.510 × 1, tarifa 5 %, sin descuento | IVA $226 (225,5 → 226) | Pendiente |
-| CP-13 | HU-02 CA2 | IVA sobre el valor con descuento | $180.000 × 1, tarifa 19 %, descuento 5 % | IVA $32.490 | Pendiente |
-| CP-14 | HU-02 CA2 | IVA total del ejemplo del enunciado | Licuadora × 1 ($180.000, 19 %), cafés × 2 ($15.000, 5 %), arroces × 4 ($4.500, 0 %); descuento 5 % | Licuadora $32.490 + cafés $1.425 + arroces $0 = $33.915 | Pendiente |
+| CP-09 | HU-02 CA1 | IVA de tarifa 0 % | $4.500 × 1, tarifa 0 %, sin descuento | IVA $0 | Pasa |
+| CP-10 | HU-02 CA1 | IVA de tarifa 5 % | $15.000 × 1, tarifa 5 %, sin descuento | IVA $750 | Pasa |
+| CP-11 | HU-02 CA1 | IVA de tarifa 19 % | $180.000 × 1, tarifa 19 %, sin descuento | IVA $34.200 | Pasa |
+| CP-12 | HU-02 CA1 | Redondea al peso más cercano (el .5 sube) | $4.510 × 1, tarifa 5 %, sin descuento | IVA $226 (225,5 → 226) | Pasa |
+| CP-13 | HU-02 CA2 | IVA sobre el valor con descuento | $180.000 × 1, tarifa 19 %, descuento 5 % | IVA $32.490 | Pasa |
+| CP-14 | HU-02 CA2 | IVA total del ejemplo del enunciado | Licuadora × 1 ($180.000, 19 %), cafés × 2 ($15.000, 5 %), arroces × 4 ($4.500, 0 %); descuento 5 % | Licuadora $32.490 + cafés $1.425 + arroces $0 = $33.915 | Pasa |
 
 ## HU-03. Descuento por volumen (Integrante A)
 
