@@ -5,15 +5,24 @@ export interface LineaIva {
   iva: number;
 }
 
+// Dos porcentajes encadenados (descuento y tarifa): se divide una sola vez al final.
+const DIVISOR_DE_DOS_PORCENTAJES = 100 * 100;
+
+function ivaDeLinea({ producto, cantidad }: ItemCarrito, porcentajeDescuento: number): number {
+  const valorDeLinea = producto.precio * cantidad;
+  const porcentajeSinDescuento = 100 - porcentajeDescuento;
+  return Math.round(
+    (valorDeLinea * porcentajeSinDescuento * producto.tarifaIva) / DIVISOR_DE_DOS_PORCENTAJES,
+  );
+}
+
 export function calcularIvaPorProducto(
   items: ItemCarrito[],
   porcentajeDescuento: number,
 ): LineaIva[] {
-  return items.map(({ producto, cantidad }) => ({
-    productoId: producto.id,
-    iva: Math.round(
-      (producto.precio * cantidad * (100 - porcentajeDescuento) * producto.tarifaIva) / 10000,
-    ),
+  return items.map((item) => ({
+    productoId: item.producto.id,
+    iva: ivaDeLinea(item, porcentajeDescuento),
   }));
 }
 
