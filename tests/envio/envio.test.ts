@@ -1,4 +1,4 @@
-import { calcularEnvio } from '../../src/envio/envio';
+import { calcularEnvio, calcularTotal } from '../../src/envio/envio';
 
 describe('HU-05 calcular el envío', () => {
   describe('CA1: el costo depende del municipio de destino', () => {
@@ -50,6 +50,22 @@ describe('HU-05 calcular el envío', () => {
 
       // Assert
       expect(envio).toBe(8000);
+    });
+  });
+
+  describe('CA3: el total es subtotal menos descuento más IVA más envío', () => {
+    test('[CP-34] con subtotal 100000, descuento 0, IVA 19000 y envío 8000 el total es 127000', () => {
+      // Arrange
+      const subtotal = 100000;
+      const descuento = 0;
+      const iva = 19000;
+      const envio = 8000;
+
+      // Act
+      const total = calcularTotal(subtotal, descuento, iva, envio);
+
+      // Assert
+      expect(total).toBe(127000);
     });
   });
 });
