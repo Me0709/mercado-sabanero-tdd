@@ -5,5 +5,6 @@ export function calcularPuntos(
   envio: number,
   categoria: CategoriaCliente,
 ): number {
-  return Math.floor(totalPagado / 1000);
+  const puntosBase = Math.floor((totalPagado - envio) / 1000);
+  return categoria === 'ORO' ? puntosBase * 2 : puntosBase;
 }
