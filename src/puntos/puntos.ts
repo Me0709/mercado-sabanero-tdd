@@ -5,5 +5,5 @@ export function calcularPuntos(
   envio: number,
   categoria: CategoriaCliente,
 ): number {
-  return 12;
+  return Math.floor(totalPagado / 1000);
 }
