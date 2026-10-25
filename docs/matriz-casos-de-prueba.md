@@ -6,14 +6,14 @@
 
 | ID | Historia | Descripción | Datos de entrada | Resultado esperado | Estado |
 |---|---|---|---|---|---|
-| CP-01 | HU-01 CA1 | Agrega 1 unidad (límite inferior) con stock suficiente | Producto P, cantidad 1, stock 100 | Carrito con P × 1 | Pendiente |
-| CP-02 | HU-01 CA1 | Agrega 50 unidades (límite superior) con stock suficiente | P, cantidad 50, stock 100 | Carrito con P × 50 | Pendiente |
-| CP-03 | HU-01 CA2 | Rechaza 0 unidades | P, cantidad 0 | Error de cantidad inválida; carrito sin cambios | Pendiente |
-| CP-04 | HU-01 CA2 | Rechaza 51 unidades | P, cantidad 51, stock 100 | Error de cantidad inválida; carrito sin cambios | Pendiente |
-| CP-05 | HU-01 CA3 | Informa stock insuficiente (doble de prueba del inventario) | P, cantidad 10, stock 5 | Error de stock insuficiente; carrito sin cambios | Pendiente |
-| CP-06 | HU-01 CA4 | Suma cantidades si el producto ya está en el carrito | Agrega P × 2 y luego P × 3 | Carrito con P × 5 en una sola línea | Pendiente |
-| CP-07 | HU-01 CA4 + CA2 (S9) | Rechaza si la cantidad acumulada supera 50 | Agrega P × 30 y luego P × 25 | Error de cantidad inválida; el carrito conserva P × 30 | Pendiente |
-| CP-08 | HU-01 CA1 | Consulta el stock al inventario con el id del producto (doble de prueba) | P con id `p1`, cantidad 2 | `consultarStock` se llama una vez con `p1` | Pendiente |
+| CP-01 | HU-01 CA1 | Agrega 1 unidad (límite inferior) con stock suficiente | Producto P, cantidad 1, stock 100 | Carrito con P × 1 | Pasa |
+| CP-02 | HU-01 CA1 | Agrega 50 unidades (límite superior) con stock suficiente | P, cantidad 50, stock 100 | Carrito con P × 50 | Pasa |
+| CP-03 | HU-01 CA2 | Rechaza 0 unidades | P, cantidad 0 | Error de cantidad inválida; carrito sin cambios | Pasa |
+| CP-04 | HU-01 CA2 | Rechaza 51 unidades | P, cantidad 51, stock 100 | Error de cantidad inválida; carrito sin cambios | Pasa |
+| CP-05 | HU-01 CA3 | Informa stock insuficiente (doble de prueba del inventario) | P, cantidad 10, stock 5 | Error de stock insuficiente; carrito sin cambios | Pasa |
+| CP-06 | HU-01 CA4 | Suma cantidades si el producto ya está en el carrito | Agrega P × 2 y luego P × 3 | Carrito con P × 5 en una sola línea | Pasa |
+| CP-07 | HU-01 CA4 + CA2 (S9) | Rechaza si la cantidad acumulada supera 50 | Agrega P × 30 y luego P × 25 | Error de cantidad inválida; el carrito conserva P × 30 | Pasa |
+| CP-08 | HU-01 CA1 | Consulta el stock al inventario con el id del producto (doble de prueba) | P con id `p1`, cantidad 2 | `consultarStock` se llama una vez con `p1` | Pasa |
 
 ## HU-02. Calcular el IVA (Integrante A)
 
