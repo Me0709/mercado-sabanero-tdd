@@ -69,11 +69,11 @@
 
 | ID | Historia | Descripción | Datos de entrada | Resultado esperado | Estado |
 |---|---|---|---|---|---|
-| CP-36 | HU-06 CA1 | 1 punto por cada $1.000 completos | Total sin envío $12.999, cliente ESTÁNDAR | 12 puntos | Pendiente |
-| CP-37 | HU-06 CA1 | Menos de $1.000 no da puntos | Total sin envío $999 | 0 puntos | Pendiente |
-| CP-38 | HU-06 CA1 | Límite exacto de $1.000 | Total sin envío $1.000 | 1 punto | Pendiente |
-| CP-39 | HU-06 CA2 | El cliente ORO recibe el doble | Total sin envío $12.999, cliente ORO | 24 puntos | Pendiente |
-| CP-40 | HU-06 CA1 | El envío no suma puntos | Total pagado $258.515 con envío $8.000 | 250 puntos | Pendiente |
+| CP-36 | HU-06 CA1 | 1 punto por cada $1.000 completos | Total sin envío $12.999, cliente ESTÁNDAR | 12 puntos | Pasa |
+| CP-37 | HU-06 CA1 | Menos de $1.000 no da puntos | Total sin envío $999 | 0 puntos | Pasa |
+| CP-38 | HU-06 CA1 | Límite exacto de $1.000 | Total sin envío $1.000 | 1 punto | Pasa |
+| CP-39 | HU-06 CA2 | El cliente ORO recibe el doble | Total sin envío $12.999, cliente ORO | 24 puntos | Pasa |
+| CP-40 | HU-06 CA1 | El envío no suma puntos | Total pagado $258.515 con envío $8.000 | 250 puntos | Pasa |
 
 ## Integración
 
