@@ -57,7 +57,7 @@ describe('HU-04 cupones', () => {
       expect(aplicar).toThrow(CuponInvalidoError);
     });
 
-    describe('con un cupón que vence el 2026-01-31', () => {
+    describe('con cupones que vencen el 2026-01-31', () => {
       const catalogo: Cupon[] = [
         {
           codigo: 'VIEJO10',
@@ -66,6 +66,7 @@ describe('HU-04 cupones', () => {
           subtotalMinimo: 0,
           vence: '2026-01-31',
         },
+        { codigo: 'VIEJOENVIO', tipo: 'ENVIO_GRATIS', vence: '2026-01-31' },
       ];
 
       test('[CP-26] aplicarCupon lanza CuponInvalidoError cuando la fecha es posterior al vencimiento', () => {
@@ -74,6 +75,17 @@ describe('HU-04 cupones', () => {
 
         // Act
         const aplicar = () => aplicarCupon('VIEJO10', 100000, hoy, catalogo);
+
+        // Assert
+        expect(aplicar).toThrow(CuponInvalidoError);
+      });
+
+      test('[CP-46] aplicarCupon lanza CuponInvalidoError cuando un cupón de envío gratis está vencido', () => {
+        // Arrange
+        const hoy = '2026-02-01';
+
+        // Act
+        const aplicar = () => aplicarCupon('VIEJOENVIO', 100000, hoy, catalogo);
 
         // Assert
         expect(aplicar).toThrow(CuponInvalidoError);

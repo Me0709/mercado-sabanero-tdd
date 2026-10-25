@@ -53,7 +53,7 @@ describe('HU-02 IVA', () => {
         item('arroz', 4500, 0, 4),
       ];
 
-      test('[CP-14] calcularIvaPorProducto devuelve el IVA de cada producto', () => {
+      test('[CP-14a] calcularIvaPorProducto devuelve el IVA de cada producto', () => {
         // Arrange: el ejemplo viene definido arriba
 
         // Act
@@ -67,7 +67,7 @@ describe('HU-02 IVA', () => {
         ]);
       });
 
-      test('[CP-14] calcularIvaTotal devuelve 33915', () => {
+      test('[CP-14b] calcularIvaTotal devuelve 33915', () => {
         // Arrange: el ejemplo viene definido arriba
 
         // Act

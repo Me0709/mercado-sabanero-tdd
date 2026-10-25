@@ -24,7 +24,7 @@
 | CP-11 | HU-02 CA1 | IVA de tarifa 19 % | $180.000 × 1, tarifa 19 %, sin descuento | IVA $34.200 | Pasa |
 | CP-12 | HU-02 CA1 | Redondea al peso más cercano (el .5 sube) | $4.510 × 1, tarifa 5 %, sin descuento | IVA $226 (225,5 → 226) | Pasa |
 | CP-13 | HU-02 CA2 | IVA sobre el valor con descuento | $180.000 × 1, tarifa 19 %, descuento 5 % | IVA $32.490 | Pasa |
-| CP-14 | HU-02 CA2 | IVA total del ejemplo del enunciado | Licuadora × 1 ($180.000, 19 %), cafés × 2 ($15.000, 5 %), arroces × 4 ($4.500, 0 %); descuento 5 % | Licuadora $32.490 + cafés $1.425 + arroces $0 = $33.915 | Pasa |
+| CP-14 | HU-02 CA2 | IVA del ejemplo del enunciado: por producto (CP-14a) y total (CP-14b) | Licuadora × 1 ($180.000, 19 %), cafés × 2 ($15.000, 5 %), arroces × 4 ($4.500, 0 %); descuento 5 % | Licuadora $32.490 + cafés $1.425 + arroces $0 = $33.915 | Pasa |
 
 ## HU-03. Descuento por volumen (Integrante A)
 
@@ -53,6 +53,7 @@
 | CP-29 | HU-04 CA4 (S6) | ENVIOGRATIS no anula el descuento por volumen | Subtotal $300.000 + ENVIOGRATIS | 5 % ($15.000) y envío gratis | Pasa |
 | CP-43 | HU-04 CA3 | El cupón sigue vigente el día de su vencimiento | Cupón con vencimiento 2026-01-31; fecha de hoy 2026-01-31 | 10 % de descuento; envío no gratis | Pasa |
 | CP-44 | HU-04 CA4 | Sin cupón se aplica solo el descuento por volumen | Subtotal $228.000, sin cupón | 5 % ($11.400); envío no gratis | Pasa |
+| CP-46 | HU-04 CA3 | Un cupón ENVIOGRATIS vencido también se rechaza | Cupón de envío gratis con vencimiento 2026-01-31; fecha de hoy 2026-02-01 | Error de cupón inválido | Pasa |
 
 ## HU-05. Calcular el envío (Integrante B)
 
@@ -89,7 +90,7 @@ Los 18 criterios quedan cubiertos.
 |---|---|---|---|
 | HU-01 CA1 | CP-01, 02, 08 | HU-04 CA1 | CP-22, 23 |
 | HU-01 CA2 | CP-03, 04, 07 | HU-04 CA2 | CP-24, 35 |
-| HU-01 CA3 | CP-05 | HU-04 CA3 | CP-25, 26, 43 |
+| HU-01 CA3 | CP-05 | HU-04 CA3 | CP-25, 26, 43, 46 |
 | HU-01 CA4 | CP-06, 07 | HU-04 CA4 | CP-27, 28, 29, 44 |
 | HU-02 CA1 | CP-09, 10, 11, 12 | HU-05 CA1 | CP-30, 31 |
 | HU-02 CA2 | CP-13, 14 | HU-05 CA2 | CP-32, 33 |
