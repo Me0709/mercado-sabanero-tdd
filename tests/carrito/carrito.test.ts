@@ -71,6 +71,18 @@ describe('HU-01 agregar productos al carrito', () => {
       );
       expect(carritoInicial).toEqual([]);
     });
+
+    test('[CP-45] rechaza si el stock no alcanza para la cantidad acumulada y deja el carrito sin cambios', () => {
+      // Arrange: ya hay 8 unidades en el carrito y el stock es 10
+      const inventario: Inventario = { consultarStock: jest.fn().mockReturnValue(10) };
+      const carritoInicial = agregarAlCarrito([], leche, 8, inventario);
+
+      // Act y Assert: 8 + 5 = 13, más de lo que hay en stock
+      expect(() => agregarAlCarrito(carritoInicial, leche, 5, inventario)).toThrow(
+        'Stock insuficiente',
+      );
+      expect(carritoInicial).toEqual([{ producto: leche, cantidad: 8 }]);
+    });
   });
 
   describe('CA4: si el producto ya está en el carrito se suman las cantidades', () => {
