@@ -6,5 +6,8 @@ export function agregarAlCarrito(
   cantidad: number,
   inventario: Inventario,
 ): ItemCarrito[] {
+  if (cantidad < 1 || cantidad > 50) {
+    throw new Error('Cantidad inválida: debe estar entre 1 y 50 unidades');
+  }
   return [{ producto, cantidad }];
 }
