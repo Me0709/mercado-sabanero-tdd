@@ -58,12 +58,12 @@
 
 | ID | Historia | Descripción | Datos de entrada | Resultado esperado | Estado |
 |---|---|---|---|---|---|
-| CP-30 | HU-05 CA1 | Envío dentro de Sincelejo | Destino Sincelejo; productos con IVA $100.000 | Envío $8.000 | Pendiente |
-| CP-31 | HU-05 CA1 | Envío a otro municipio de Sucre | Destino Corozal; productos con IVA $100.000 | Envío $15.000 | Pendiente |
-| CP-32 | HU-05 CA2 | Envío gratis en el límite | Productos con IVA $150.000 | Envío $0 | Pendiente |
-| CP-33 | HU-05 CA2 | Se cobra el envío justo bajo el límite | Sincelejo; productos con IVA $149.999 | Envío $8.000 | Pendiente |
-| CP-34 | HU-05 CA3 | Total = subtotal − descuento + IVA + envío | Subtotal $100.000; descuento $0; IVA $19.000; envío $8.000 | Total $127.000 | Pendiente |
-| CP-35 | HU-05 + HU-04 CA2 | Envío $0 con cupón ENVIOGRATIS | Sincelejo; productos con IVA $100.000; ENVIOGRATIS | Envío $0 | Pendiente |
+| CP-30 | HU-05 CA1 | Envío dentro de Sincelejo | Destino Sincelejo; productos con IVA $100.000 | Envío $8.000 | Pasa |
+| CP-31 | HU-05 CA1 | Envío a otro municipio de Sucre | Destino Corozal; productos con IVA $100.000 | Envío $15.000 | Pasa |
+| CP-32 | HU-05 CA2 | Envío gratis en el límite | Productos con IVA $150.000 | Envío $0 | Pasa |
+| CP-33 | HU-05 CA2 | Se cobra el envío justo bajo el límite | Sincelejo; productos con IVA $149.999 | Envío $8.000 | Pasa |
+| CP-34 | HU-05 CA3 | Total = subtotal − descuento + IVA + envío | Subtotal $100.000; descuento $0; IVA $19.000; envío $8.000 | Total $127.000 | Pasa |
+| CP-35 | HU-05 + HU-04 CA2 | Envío $0 con cupón ENVIOGRATIS | Sincelejo; productos con IVA $100.000; ENVIOGRATIS | Envío $0 | Pasa |
 
 ## HU-06. Acumular puntos (Integrante B)
 
