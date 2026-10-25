@@ -13,5 +13,17 @@ describe('HU-05 calcular el envío', () => {
       // Assert
       expect(envio).toBe(8000);
     });
+
+    test('[CP-31] el envío a otro municipio de Sucre cuesta 15000', () => {
+      // Arrange
+      const municipio = 'Corozal';
+      const productosConIva = 100000;
+
+      // Act
+      const envio = calcularEnvio(municipio, productosConIva);
+
+      // Assert
+      expect(envio).toBe(15000);
+    });
   });
 });
