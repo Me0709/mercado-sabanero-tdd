@@ -81,6 +81,7 @@
 | ID | Historia | Descripción | Datos de entrada | Resultado esperado | Estado |
 |---|---|---|---|---|---|
 | CP-41 | HU-01 a HU-06 | Ejemplo del enunciado | Cliente ESTÁNDAR en Sincelejo, sin cupón; 1 licuadora $180.000 (IVA 19 %), 2 cafés $15.000 (IVA 5 %), 4 arroces $4.500 (IVA 0 %) | Subtotal $228.000; descuento 5 % = $11.400; IVA $33.915; envío $0; total $250.515; 250 puntos | Pendiente |
+| CP-47 | HU-01 a HU-06 | Compra con cupón, cliente ORO y envío a otro municipio (el envío usa solo los productos con IVA, supuesto 8) | Cliente ORO en Corozal con SABANERO10; 40 arroces $4.500 (IVA 0 %) y 10 leches $4.000 (IVA 5 %) | Subtotal $220.000; descuento 10 % = $22.000 (gana el cupón al 5 % por volumen); IVA $1.800; envío $15.000; total $214.800; 398 puntos | Pendiente |
 
 ## Trazabilidad de los criterios de aceptación
 
