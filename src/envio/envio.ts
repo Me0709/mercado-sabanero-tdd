@@ -7,3 +7,12 @@ export function calcularEnvio(municipio: string, productosConIva: number): numbe
   }
   return 15000;
 }
+
+export function calcularTotal(
+  subtotal: number,
+  descuento: number,
+  iva: number,
+  envio: number,
+): number {
+  return subtotal - descuento + iva + envio;
+}
