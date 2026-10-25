@@ -97,5 +97,24 @@ describe('HU-01 agregar productos al carrito', () => {
       );
       expect(carritoInicial).toEqual([{ producto: leche, cantidad: 30 }]);
     });
+
+    test('[CP-06b] suma solo el producto repetido y deja intacto el otro producto', () => {
+      // Arrange: el carrito ya tiene leche × 2 y arroz × 4
+      const arroz: Producto = { id: 'P2', nombre: 'Arroz', precio: 4500, tarifaIva: 0 };
+      const inventario: Inventario = { consultarStock: jest.fn().mockReturnValue(100) };
+      const carritoInicial: ItemCarrito[] = [
+        { producto: leche, cantidad: 2 },
+        { producto: arroz, cantidad: 4 },
+      ];
+
+      // Act
+      const carrito = agregarAlCarrito(carritoInicial, leche, 3, inventario);
+
+      // Assert
+      expect(carrito).toEqual([
+        { producto: leche, cantidad: 5 },
+        { producto: arroz, cantidad: 4 },
+      ]);
+    });
   });
 });
