@@ -22,13 +22,22 @@ export interface Liquidacion {
   puntos: number;
 }
 
+function valorDeLinea({ producto, cantidad }: ItemCarrito): number {
+  return producto.precio * cantidad;
+}
+
+function sumar(valores: number[]): number {
+  return valores.reduce((suma, valor) => suma + valor, 0);
+}
+
 export function liquidarCompra(solicitud: SolicitudCompra): Liquidacion {
   const { items, municipio, categoria, codigoCupon, hoy } = solicitud;
 
-  const subtotal = items.reduce((suma, i) => suma + i.producto.precio * i.cantidad, 0);
-  const productosConIva = items
-    .filter((i) => i.producto.tarifaIva > 0)
-    .reduce((suma, i) => suma + i.producto.precio * i.cantidad, 0);
+  const subtotal = sumar(items.map(valorDeLinea));
+  // Supuesto 8: el envío gratis cuenta solo los productos con IVA, a valor de lista.
+  const productosConIva = sumar(
+    items.filter((item) => item.producto.tarifaIva > 0).map(valorDeLinea),
+  );
 
   const descuentos = calcularDescuentos(subtotal, codigoCupon, hoy);
   const iva = calcularIvaTotal(items, descuentos.porcentajeDescuento);
