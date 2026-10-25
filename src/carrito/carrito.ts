@@ -17,7 +17,7 @@ export function agregarAlCarrito(
       `Cantidad inválida: debe estar entre ${CANTIDAD_MINIMA} y ${CANTIDAD_MAXIMA} unidades`,
     );
   }
-  if (inventario.consultarStock(producto.id) < cantidad) {
+  if (inventario.consultarStock(producto.id) < cantidadTotal) {
     throw new Error('Stock insuficiente');
   }
 
