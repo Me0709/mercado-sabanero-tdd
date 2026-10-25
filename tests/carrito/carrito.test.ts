@@ -26,6 +26,20 @@ describe('HU-01 agregar productos al carrito', () => {
       // Assert
       expect(carrito).toEqual([{ producto: leche, cantidad: 50 }]);
     });
+
+    test('[CP-08] consulta el stock una sola vez con el id del producto', () => {
+      // Arrange
+      const consultarStock = jest.fn().mockReturnValue(100);
+      const inventario: Inventario = { consultarStock };
+      const producto: Producto = { ...leche, id: 'p1' };
+
+      // Act
+      agregarAlCarrito([], producto, 2, inventario);
+
+      // Assert
+      expect(consultarStock).toHaveBeenCalledTimes(1);
+      expect(consultarStock).toHaveBeenCalledWith('p1');
+    });
   });
 
   describe('CA2: se rechazan 0 unidades o más de 50', () => {
@@ -58,7 +72,7 @@ describe('HU-01 agregar productos al carrito', () => {
       expect(carritoInicial).toEqual([]);
     });
   });
-  
+
   describe('CA4: si el producto ya está en el carrito se suman las cantidades', () => {
     test('[CP-06] suma 2 y 3 unidades del mismo producto en una sola línea', () => {
       // Arrange
