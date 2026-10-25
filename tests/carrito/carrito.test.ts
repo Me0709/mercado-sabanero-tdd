@@ -58,4 +58,30 @@ describe('HU-01 agregar productos al carrito', () => {
       expect(carritoInicial).toEqual([]);
     });
   });
+  
+  describe('CA4: si el producto ya está en el carrito se suman las cantidades', () => {
+    test('[CP-06] suma 2 y 3 unidades del mismo producto en una sola línea', () => {
+      // Arrange
+      const inventario: Inventario = { consultarStock: jest.fn().mockReturnValue(100) };
+      const primero = agregarAlCarrito([], leche, 2, inventario);
+
+      // Act
+      const carrito = agregarAlCarrito(primero, leche, 3, inventario);
+
+      // Assert
+      expect(carrito).toEqual([{ producto: leche, cantidad: 5 }]);
+    });
+
+    test('[CP-07] rechaza si la cantidad acumulada supera 50 y conserva el carrito', () => {
+      // Arrange: ya hay 30 y se intenta agregar 25 más, para un total de 55
+      const inventario: Inventario = { consultarStock: jest.fn().mockReturnValue(100) };
+      const carritoInicial = agregarAlCarrito([], leche, 30, inventario);
+
+      // Act y Assert
+      expect(() => agregarAlCarrito(carritoInicial, leche, 25, inventario)).toThrow(
+        'Cantidad inválida',
+      );
+      expect(carritoInicial).toEqual([{ producto: leche, cantidad: 30 }]);
+    });
+  });
 });
