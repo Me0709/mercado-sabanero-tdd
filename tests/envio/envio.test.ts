@@ -51,6 +51,19 @@ describe('HU-05 calcular el envío', () => {
       // Assert
       expect(envio).toBe(8000);
     });
+
+    test('[CP-35] con el cupón ENVIOGRATIS el envío es 0 aunque no llegue al límite', () => {
+      // Arrange: 100000 está por debajo de 150000, pero el cupón da envío gratis
+      const municipio = 'Sincelejo';
+      const productosConIva = 100000;
+      const envioGratisPorCupon = true;
+
+      // Act
+      const envio = calcularEnvio(municipio, productosConIva, envioGratisPorCupon);
+
+      // Assert
+      expect(envio).toBe(0);
+    });
   });
 
   describe('CA3: el total es subtotal menos descuento más IVA más envío', () => {
