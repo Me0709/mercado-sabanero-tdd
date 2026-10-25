@@ -1,6 +1,6 @@
 # Matriz de casos de prueba
 
-44 casos. Cada caso pasa de **Pendiente** a **Pasa** cuando su prueba se ejecuta en verde. Los supuestos citados (S4, S6, S9) son los de la sección 9 del plan de pruebas.
+47 casos. Cada caso pasa de **Pendiente** a **Pasa** cuando su prueba se ejecuta en verde. El ID CP-45 se dejó sin usar: queda reservado para un caso de stock acumulado, pendiente de confirmar con la docente. Los supuestos citados (S4, S6, S9) son los de la sección 9 del plan de pruebas.
 
 ## HU-01. Agregar productos al carrito (Integrante B)
 
@@ -12,6 +12,7 @@
 | CP-04 | HU-01 CA2 | Rechaza 51 unidades | P, cantidad 51, stock 100 | Error de cantidad inválida; carrito sin cambios | Pasa |
 | CP-05 | HU-01 CA3 | Informa stock insuficiente (doble de prueba del inventario) | P, cantidad 10, stock 5 | Error de stock insuficiente; carrito sin cambios | Pasa |
 | CP-06 | HU-01 CA4 | Suma cantidades si el producto ya está en el carrito | Agrega P × 2 y luego P × 3 | Carrito con P × 5 en una sola línea | Pasa |
+| CP-06b | HU-01 CA4 | Suma solo el producto repetido y deja intacto el otro producto del carrito | Carrito con leche × 2 y arroz × 4; agrega leche × 3 | Leche × 5 y arroz × 4 | Pasa |
 | CP-07 | HU-01 CA4 + CA2 (S9) | Rechaza si la cantidad acumulada supera 50 | Agrega P × 30 y luego P × 25 | Error de cantidad inválida; el carrito conserva P × 30 | Pasa |
 | CP-08 | HU-01 CA1 | Consulta el stock al inventario con el id del producto (doble de prueba) | P con id `p1`, cantidad 2 | `consultarStock` se llama una vez con `p1` | Pasa |
 
@@ -92,7 +93,7 @@ Los 18 criterios quedan cubiertos.
 | HU-01 CA1 | CP-01, 02, 08 | HU-04 CA1 | CP-22, 23 |
 | HU-01 CA2 | CP-03, 04, 07 | HU-04 CA2 | CP-24, 35 |
 | HU-01 CA3 | CP-05 | HU-04 CA3 | CP-25, 26, 43, 46 |
-| HU-01 CA4 | CP-06, 07 | HU-04 CA4 | CP-27, 28, 29, 44 |
+| HU-01 CA4 | CP-06, 06b, 07 | HU-04 CA4 | CP-27, 28, 29, 44 |
 | HU-02 CA1 | CP-09, 10, 11, 12 | HU-05 CA1 | CP-30, 31 |
 | HU-02 CA2 | CP-13, 14 | HU-05 CA2 | CP-32, 33 |
 | HU-03 CA1 | CP-15, 16 | HU-05 CA3 | CP-34 |
