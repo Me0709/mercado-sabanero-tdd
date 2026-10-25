@@ -1,5 +1,9 @@
-export function calcularEnvio(municipio: string, productosConIva: number): number {
-  if (productosConIva >= 150000) {
+export function calcularEnvio(
+  municipio: string,
+  productosConIva: number,
+  envioGratisPorCupon = false,
+): number {
+  if (envioGratisPorCupon || productosConIva >= 150000) {
     return 0;
   }
   if (municipio === 'Sincelejo') {
