@@ -50,7 +50,7 @@ No se usa NestJS porque no hay API. TypeScript se fija en la serie 6 porque `ts-
 ## 6. Criterios de éxito
 
 - Todas las pruebas pasan con `npm test`.
-- Al menos 20 pruebas unitarias (la matriz planifica 47 casos), con al menos 2 parametrizadas, 4 de error y 2 con doble de prueba.
+- Al menos 20 pruebas unitarias (la matriz planifica 48 casos), con al menos 2 parametrizadas, 4 de error y 2 con doble de prueba.
 - Cobertura de líneas de al menos 80 % (`npm run test:cov`, con el umbral configurado en `jest.config.js`).
 - El ejemplo del enunciado da: subtotal $228.000, descuento $11.400, IVA $33.915, envío $0, total $250.515 y 250 puntos.
 - Commits `test:` → `feat:` → `refactor:` en las 6 historias.
